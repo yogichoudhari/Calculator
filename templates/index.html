@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href={% static "css/base.css" %}>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+    <script defer src={% static 'js/base.js' %}></script>
+    
+</head>
+<body>
+    <h1 style="text-align:center;color:green">{{greetings}}</h1>
+    <div class='calc'>
+        <input style='width:30%' disabled id='operations' type="text"><br>
+        <input type="number" id='num1' name='num1' placeholder='please enter number 1'>
+        <input type="number" id='num2' name='num2' placeholder='please enter number 2'><br>
+        <select name="operator" id="operator">
+            <option  selected value="">Select Operator</option>
+            <option  value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br>
+        <button id="btn" >Calculate</button>
+        <input type="number" id='result' disabled placeholder='Result will be shown here'>
+        <div class='continue' style='display:none'>
+            <p>do you wish to continue ?</p>
+                    Yes : <input type='radio' name='perm' value='yes'><br>
+                    No : <input type='radio' name='perm' value='no'>
+        </div>
+
+    </div>
+</body>
+</html>
